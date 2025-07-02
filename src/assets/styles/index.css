@@ -1,0 +1,7 @@
+@import url("./colors.css");
+
+:root {
+  font-family: "Fira Sans", sans-serif;
+  margin: 0 auto;
+  background-color: var(--background);
+}
