@@ -1,24 +1,30 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 36px 20px;
 }
 
 .logo {
   cursor: pointer;
 }
-
 .logo:hover path:nth-of-type(3) {
   fill: var(--secondary);
 }
 .burger {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 16px;
+  height: 16px;
   padding: 12px;
   border-radius: 25px;
   background-color: var(--accent);
   transition: background-color 0.3s ease;
+}
+
+.wrapBurger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .burger:hover {
