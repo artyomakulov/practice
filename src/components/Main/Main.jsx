@@ -28,6 +28,7 @@ const Main = () => {
           <a href="mailto:office@ecosolution.com" className={css.link}>
             office@ecosolution.com
           </a>
+          <p className={css.copyright}>ecosolution © 2023</p>
         </address>
       </div>
     </div>
