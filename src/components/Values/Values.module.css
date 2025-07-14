@@ -1,0 +1,31 @@
+.card {
+  width: 148px;
+  height: 197px;
+  background-color: var(--card);
+}
+
+.titleWrap {
+  display: flex;
+  gap: 8px;
+  padding: 17px 12px 33px 12px;
+}
+
+.title {
+  font-family: oswald, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.textWrap {
+  display: flex;
+  text-align: start;
+  padding: 12px;
+}
+
+.text {
+  color: var(--text);
+  font-size: 14px;
+  border-top: 1px solid var(--secondary);
+  padding-top: 12px;
+}
