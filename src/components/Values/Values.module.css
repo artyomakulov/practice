@@ -1,6 +1,15 @@
+.container {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 24px;
+  justify-content: space-between;
+}
+
 .card {
-  width: 148px;
-  height: 197px;
+  min-width: 148px;
+  max-height: 197px;
   background-color: var(--card);
 }
 
@@ -28,4 +37,10 @@
   font-size: 14px;
   border-top: 1px solid var(--secondary);
   padding-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
 }
