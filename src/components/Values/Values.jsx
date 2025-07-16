@@ -10,7 +10,7 @@ const Values = () => {
         <React.Fragment key={title}>
           <div className={css.card}>
             <div className={css.titleWrap}>
-              <Icon />
+              <Icon className={css.iconSvg} />
               <h4 className={css.title}>{title}</h4>
             </div>
             <div className={css.textWrap}>
@@ -19,13 +19,22 @@ const Values = () => {
           </div>
 
           {index === 1 && (
-            <img src="/src/assets/images/man-worker.png" alt="man worker" />
-          )}
-          {index === 3 && (
-            <img
-              src="/src/assets/images/wind-farms-fields 1.png"
-              alt="wind filds"
-            />
+            <>
+              <div className={css.imageWrapper}>
+                <img
+                  src="/src/assets/images/man-worker.png"
+                  alt="man worker"
+                  className={css.image}
+                />
+              </div>
+              <div className={css.imageWrapper}>
+                <img
+                  src="/src/assets/images/wind-farms-fields 1.png"
+                  alt="wind fields"
+                  className={css.image}
+                />
+              </div>
+            </>
           )}
         </React.Fragment>
       ))}
