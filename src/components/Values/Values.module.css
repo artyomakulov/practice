@@ -47,7 +47,7 @@
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 30px;
+    padding: 60px 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     row-gap: 24px;
@@ -71,7 +71,7 @@
 
 @media (min-width: 1280px) {
   .container {
-    padding: 0 100px;
+    padding: 84px 100px;
     row-gap: 48px;
     column-gap: 48px;
   }
