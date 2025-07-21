@@ -1,0 +1,54 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 728px;
+  background-color: var(--primary);
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 12px 24px;
+}
+
+.text {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+
+.arrowWrap {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--secondary);
+  border-radius: 50%;
+  padding: 16px;
+}
+
+.description {
+  padding: 12px;
+}
+
+.descContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--secondary);
+}
+
+.descText {
+  font-size: 14px;
+  color: var(--text);
+}
+.descDate {
+  font-size: 14px;
+  color: var(--text);
+}
