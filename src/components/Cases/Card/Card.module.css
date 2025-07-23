@@ -15,6 +15,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 27px 12px 24px;
+  gap: 28px;
 }
 
 .text {
@@ -34,7 +35,7 @@
 }
 
 .description {
-  padding: 12px;
+  padding: 0 12px 12px 12px;
 }
 
 .descContainer {
@@ -45,10 +46,45 @@
 }
 
 .descText {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--text);
 }
 .descDate {
-  font-size: 14px;
+  font-size: 12px;
   color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 20px;
+  }
+  .descText {
+    font-size: 14px;
+  }
+  .descDate {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .textContainer {
+    padding: 36px 48px;
+    gap: 32px;
+  }
+  .text {
+    font-size: 24px;
+  }
+  .description {
+    padding: 24px 48px 36px 48px;
+  }
+  .descContainer {
+    padding-top: 24px;
+  }
+
+  .descText {
+    font-size: 16px;
+  }
+  .descDate {
+    font-size: 16px;
+  }
 }
