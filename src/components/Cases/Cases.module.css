@@ -1,16 +1,83 @@
 /* .embla {
   overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
 }
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
 .embla__container {
   display: flex;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
 } */
 
 .container {
   padding: 0 20px;
+}
+.controls {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.counter {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c4b45;
+}
+
+.arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.arrowButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #2c4b45;
+  background-color: transparent;
+  color: #2c4b45;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.arrowButton:hover {
+  background-color: #2c4b45;
+  color: white;
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.emblaViewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.emblaContainer {
+  display: flex;
+}
+
+.emblaSlide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .emblaSlide {
+    flex: 0 0 50%;
+  }
+  .emblaContainer {
+    gap: 24px;
+  }
 }
