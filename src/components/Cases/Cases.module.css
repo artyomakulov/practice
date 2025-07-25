@@ -1,32 +1,35 @@
-/* .embla {
-  overflow: hidden;
-  width: 100%;
-  padding: 20px 0;
-}
-
-.embla__viewport {
-  overflow: hidden;
-  width: 100%;
-}
-
-.embla__container {
-  display: flex;
-} */
-
 .container {
   padding: 0 20px;
+}
+
+.upperPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .controls {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   margin-bottom: 24px;
 }
 
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--text);
+  width: 264px;
+}
+
 .counter {
-  font-size: 16px;
-  font-weight: 600;
-  color: #2c4b45;
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text);
+}
+
+.counter2 {
+  color: rgba(23, 61, 51, 0.25);
 }
 
 .arrows {
@@ -35,28 +38,25 @@
 }
 
 .arrowButton {
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
-  border: 1px solid #2c4b45;
+  padding: 15px;
+  border: 1px solid var(--text);
   background-color: transparent;
-  color: #2c4b45;
-  font-size: 20px;
-  font-weight: bold;
+  stroke: var(--text);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  transition: border 0.2s ease, stroke 0.2s ease;
 }
 
 .arrowButton:hover {
-  background-color: #2c4b45;
-  color: white;
+  border: 1px solid var(--secondary);
+  stroke: var(--secondary);
 }
 
 .embla {
-  overflow: hidden;
+  display: flex;
 }
 
 .emblaViewport {
@@ -71,13 +71,64 @@
 .emblaSlide {
   flex: 0 0 100%;
   min-width: 0;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding: 60px 30px;
+  }
+  .upperPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 38px;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .controls {
+    margin-bottom: 0;
+    gap: 126px;
+  }
+
   .emblaSlide {
-    flex: 0 0 50%;
+    flex: 0 0 calc(50% - 12px);
   }
   .emblaContainer {
     gap: 24px;
+  }
+
+  .arrows {
+    gap: 12px;
+  }
+  .divider {
+    width: 1px;
+    height: 65px;
+    background-color: var(--secondary);
+    position: absolute;
+    left: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 84px 100px;
+  }
+  .controls {
+    gap: 194px;
+  }
+  .title {
+    font-size: 48px;
+    width: 400px;
+  }
+  .emblaSlide {
+    flex: 0 0 calc(50% - 24px);
+  }
+  .emblaContainer {
+    gap: 48px;
+  }
+  .divider {
+    height: 96px;
   }
 }

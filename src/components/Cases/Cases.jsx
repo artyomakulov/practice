@@ -10,6 +10,7 @@ const Cases = () => {
     loop: false,
     slidesToScroll: 1,
     containScroll: "trimSnaps",
+    align: "start",
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -27,15 +28,21 @@ const Cases = () => {
 
   return (
     <div className={css.container}>
-      <h2 className={css.title}>Successful cases of our company</h2>
-      <div className={css.controls}>
-        <span className={css.counter}>
-          {(selectedIndex + 1).toString().padStart(2, "0")} /{" "}
-          {cardData.length.toString().padStart(2, "0")}
-        </span>
-        <div className={css.arrows}>
-          <PrevButton onClick={() => emblaApi?.scrollPrev()} />
-          <NextButton onClick={() => emblaApi?.scrollNext()} />
+      <div className={css.upperPanel}>
+        <h3 className={css.title}>Successful cases of our company</h3>
+        <div className={css.divider}></div>
+
+        <div className={css.controls}>
+          <span className={css.counter}>
+            {(selectedIndex + 1).toString().padStart(2, "0")}
+            <span className={css.counter2}>
+              /{cardData.length.toString().padStart(2, "0")}
+            </span>
+          </span>
+          <div className={css.arrows}>
+            <PrevButton onClick={() => emblaApi?.scrollPrev()} />
+            <NextButton onClick={() => emblaApi?.scrollNext()} />
+          </div>
         </div>
       </div>
 

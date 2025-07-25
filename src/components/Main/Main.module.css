@@ -47,7 +47,7 @@
   padding: 10.5px 12px;
 }
 
-.btnText:hover {
+.btn:hover .btnText {
   color: var(--secondary);
 }
 
