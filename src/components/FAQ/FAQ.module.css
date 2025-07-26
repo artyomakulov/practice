@@ -1,0 +1,50 @@
+.container {
+  padding: 36px 20px;
+}
+
+.faqSection {
+  margin-top: 24px;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-size: 28px;
+  color: var(--text);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 17px;
+  border-top: solid 1px var(--secondary);
+}
+
+.questionBlock {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.question {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.answer {
+  margin-left: 24px;
+  font-size: 14px;
+  color: var(--text);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.open {
+  margin-top: 16px;
+  max-height: 200px;
+  opacity: 1;
+}
