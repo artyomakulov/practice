@@ -3,6 +3,7 @@ import faqData from "./data";
 import css from "./FAQ.module.css";
 import Minus from "../../assets/images/minus.svg?react";
 import Add from "../../assets/images/add.svg?react";
+import ArrowUp from "../../assets/images/arrow-down.svg?react";
 
 const FAQ = () => {
   const [openId, setOpenId] = useState(null);
@@ -35,8 +36,15 @@ const FAQ = () => {
           );
         })}
       </ul>
-      <div>Didn't find the answer to your question? </div>
-      <button>press</button>
+      <div className={css.afterBlock}>
+        <p className={css.afterText}>
+          Didn't find the answer to your question?
+        </p>
+        <button className={css.btn}>
+          <span className={css.btnText}>Contact Us</span>
+          <ArrowUp className={css.arrow} />
+        </button>
+      </div>
     </div>
   );
 };

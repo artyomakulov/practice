@@ -1,5 +1,5 @@
 .container {
-  padding: 36px 20px;
+  margin: 36px 20px;
 }
 
 .faqSection {
@@ -47,4 +47,53 @@
   margin-top: 16px;
   max-height: 200px;
   opacity: 1;
+}
+
+.afterBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 36px;
+  gap: 12px;
+}
+.afterText {
+  font-size: 18px;
+  color: var(--text);
+  letter-spacing: -0.04em;
+}
+.btn {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 500px;
+  color: var(--text);
+  background-color: var(--secondary);
+  border-color: transparent;
+  transition: color 0.3s ease, background-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.btnText {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+}
+.arrow {
+  width: 14px;
+  height: 14px;
+  background-color: var(--text);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  color: var(--secondary);
+  background-color: var(--text);
+}
+
+.btn:hover .arrow {
+  background-color: var(--secondary);
 }

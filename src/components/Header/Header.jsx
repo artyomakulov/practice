@@ -16,7 +16,7 @@ const Header = () => {
             <BurgerIcon className={css.burger} />
           </span>
           <button className={css.btn}>
-            <span>Get in touch</span>
+            <span className={css.btnText}>Get in touch</span>
             <ArrowDown className={css.arrow} />
           </button>
         </div>
