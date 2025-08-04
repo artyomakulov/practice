@@ -2,7 +2,7 @@ export const cardData = [
   {
     image:
       "/src/assets/images/beautiful-view-wind-turbines-grass-covered-field-captured-holland.png",
-    text: "Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
+    text: "Lviv Region, Radekhiv town Private Enterprise “Zakhydniy”",
     description: {
       descText: "Wind Power for auto field irrigation",
       descDate: "July 2023",

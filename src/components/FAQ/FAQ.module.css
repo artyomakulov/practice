@@ -1,5 +1,5 @@
 .container {
-  margin: 36px 20px;
+  padding: 36px 20px;
 }
 
 .faqSection {
@@ -96,4 +96,28 @@
 
 .btn:hover .arrow {
   background-color: var(--secondary);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 46px 30px;
+  }
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 56px 100px;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .question {
+    font-size: 24px;
+  }
+  .answer {
+    font-size: 16px;
+  }
 }
