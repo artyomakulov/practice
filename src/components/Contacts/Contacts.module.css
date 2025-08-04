@@ -1,0 +1,31 @@
+.container {
+  padding: 0 20px;
+  color: var(--text);
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contacts_item {
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contacts_section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact_type {
+  margin-bottom: 8px;
+}
