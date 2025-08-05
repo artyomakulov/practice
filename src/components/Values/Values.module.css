@@ -1,4 +1,4 @@
-.container {
+.section {
   padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -46,7 +46,7 @@
 }
 
 @media (min-width: 768px) {
-  .container {
+  .section {
     padding: 60px 30px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -70,7 +70,7 @@
 }
 
 @media (min-width: 1280px) {
-  .container {
+  .section {
     padding: 84px 100px;
     row-gap: 48px;
     column-gap: 48px;

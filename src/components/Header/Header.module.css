@@ -1,4 +1,4 @@
-.container {
+.section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@
 }
 
 @media (min-width: 768px) {
-  .container {
+  .section {
     padding: 36px 30px;
   }
 
@@ -84,7 +84,7 @@
 }
 
 @media (min-width: 1280px) {
-  .container {
+  .section {
     padding: 24px 100px;
   }
 }

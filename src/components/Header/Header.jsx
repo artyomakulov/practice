@@ -7,7 +7,7 @@ import ArrowDown from "../../assets/images/arrow-down.svg?react ";
 const Header = () => {
   return (
     <header>
-      <div className={css.container}>
+      <div className={css.section}>
         <span>
           <Logo className={css.logo} alt="logo" />
         </span>

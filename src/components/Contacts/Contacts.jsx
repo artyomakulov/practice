@@ -8,7 +8,7 @@ import Instagram from "../../assets/images/instagram.svg?react";
 
 const Contacts = () => {
   return (
-    <div className={css.container}>
+    <div className={css.section}>
       <h3 className={css.title}>Contact us</h3>
       <div className={css.contacts_section}>
         <div className={css.contacts_block}>
@@ -36,8 +36,8 @@ const Contacts = () => {
             79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
           </p>
         </div>
-        <div>
-          <p>Social networks</p>
+        <div className={css.contacts_block}>
+          <p className={css.contact_type}>Social networks</p>
           <Facebook />
           <Instagram />
         </div>

@@ -4,7 +4,7 @@ import ArrowRight from "../../assets/images/arrow-right.svg?react";
 
 const Main = () => {
   return (
-    <div className={css.container}>
+    <div className={css.section}>
       <div className={css.textSection}>
         <h1 className={css.title}>RENEWABLE ENERGY For any task</h1>
         <div className={css.description}>

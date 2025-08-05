@@ -5,7 +5,7 @@ import { valuesData } from "./data";
 
 const Values = () => {
   return (
-    <div className={css.container}>
+    <div className={css.section}>
       {valuesData.map(({ image: Icon, title, text }, index) => (
         <React.Fragment key={title}>
           <div className={css.card}>

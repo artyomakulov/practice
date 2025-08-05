@@ -1,4 +1,4 @@
-.container {
+.section {
   padding: 36px 20px;
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@
 }
 
 @media (min-width: 768px) {
-  .container {
+  .section {
     padding: 40px 30px;
   }
   .title {
@@ -61,7 +61,7 @@
 }
 
 @media (min-width: 1280px) {
-  .container {
+  .section {
     padding: 36px 100px;
   }
   .divider {

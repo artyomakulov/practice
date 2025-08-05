@@ -27,7 +27,7 @@ const Cases = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className={css.container}>
+    <div className={css.section}>
       <div className={css.upperPanel}>
         <h3 className={css.title}>Successful cases of our company</h3>
         <div className={css.divider}></div>

@@ -16,7 +16,7 @@ const Electricity = () => {
   };
 
   return (
-    <div className={css.container}>
+    <div className={css.section}>
       <h2 className={css.title}>Electricity we produced for all time</h2>
       <div className={css.divider}></div>
       <div className={css.counter}>
