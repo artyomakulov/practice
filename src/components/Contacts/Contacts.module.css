@@ -1,6 +1,9 @@
 .section {
   padding: 0 20px;
   color: var(--text);
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
 }
 
 .title {
@@ -30,20 +33,37 @@
   margin-bottom: 8px;
 }
 
+.social {
+  padding: 12px;
+}
+
 @media (min-width: 768px) {
   .section {
-    padding: 20px 56px;
+    padding: 0 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contacts_section {
+    width: 50%;
+  }
+  .formWrapper {
+    width: 50%;
   }
   .title {
-    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 56px;
   }
 }
 
 @media (min-width: 1280px) {
   .section {
-    padding: 64px 100px;
+    padding: 0 100px;
   }
   .title {
     font-size: 48px;
+  }
+  .title {
+    margin-bottom: 120px;
+    margin-top: 64px;
   }
 }

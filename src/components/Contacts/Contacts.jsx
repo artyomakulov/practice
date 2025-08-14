@@ -9,9 +9,9 @@ import Form from "../Form/Form";
 
 const Contacts = () => {
   return (
-    <>
+    <div>
+      <h3 className={css.title}>Contact us</h3>
       <div className={css.section}>
-        <h3 className={css.title}>Contact us</h3>
         <div className={css.contacts_section}>
           <div className={css.contacts_block}>
             <p className={css.contact_type}>Phone:</p>
@@ -43,13 +43,15 @@ const Contacts = () => {
           </div>
           <div className={css.contacts_block}>
             <p className={css.contact_type}>Social networks</p>
-            <Facebook />
-            <Instagram />
+            <Facebook className={css.social} />
+            <Instagram className={css.social} />
           </div>
         </div>
+        <div className={css.formWrapper}>
+          <Form />
+        </div>
       </div>
-      <Form />
-    </>
+    </div>
   );
 };
 
