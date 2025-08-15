@@ -14,7 +14,7 @@ const Contacts = () => {
       <div className={css.section}>
         <div className={css.contacts_section}>
           <div className={css.contacts_block}>
-            <p className={css.contact_type}>Phone:</p>
+            <span className={css.contact_type}>Phone:</span>
             <a href="tel:+380981234567" className={css.contacts_item}>
               <Phone />
               38 (098) 12 34 567
@@ -25,7 +25,7 @@ const Contacts = () => {
             </a>
           </div>
           <div className={css.contacts_block}>
-            <p className={css.contact_type}>Email:</p>
+            <span className={css.contact_type}>Email:</span>
             <a
               href="mailto:office@ecosolution.com"
               className={css.contacts_item}
@@ -35,7 +35,7 @@ const Contacts = () => {
             </a>
           </div>
           <div className={css.contacts_block}>
-            <p className={css.contact_type}>Address:</p>
+            <span className={css.contact_type}>Address:</span>
             <p className={css.contacts_item}>
               <Map />
               79005, Ukraine, Lvivstreet. Shota Rustaveli, 7

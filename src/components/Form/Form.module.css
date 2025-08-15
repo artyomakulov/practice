@@ -36,6 +36,10 @@
   color: var(--text);
 }
 
+.input.invalid {
+  border-color: rgba(210, 139, 139, 1);
+}
+
 .message {
   height: 150px;
   resize: none;
