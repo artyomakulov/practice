@@ -12,6 +12,7 @@
   "dependencies": {
     "embla-carousel-react": "^8.6.0",
     "modern-normalize": "^3.0.1",
+    "notiflix": "^3.2.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

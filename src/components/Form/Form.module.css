@@ -9,7 +9,7 @@
   padding: 36px 12px;
 }
 
-.inputContainer {
+.inputBlock {
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -25,6 +25,10 @@
   font-size: 16px;
 }
 
+.inputContainer {
+  position: relative;
+}
+
 .input {
   padding: 0 0 8px 0;
   background-color: var(--primary);
@@ -38,6 +42,18 @@
 
 .input.invalid {
   border-color: rgba(210, 139, 139, 1);
+}
+
+.errorContainer {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+}
+
+.errorMsg {
+  font-family: "Fira Sans", sans-serif;
+  color: rgba(210, 139, 139, 1);
+  font-size: 12px;
 }
 
 .message {

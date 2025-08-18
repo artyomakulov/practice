@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import css from "./Form.module.css";
 import ArrowRight from "../../assets/images/arrow-right.svg?react";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -16,7 +17,8 @@ const Form = () => {
   const handleNameChange = (e) => {
     const newName = e.target.value;
     setName(newName);
-    const nameRegex = /^[^\d]+$/;
+    const nameRegex = /^[A-ZА-Я][a-zа-я]+ [A-ZА-Я][a-zа-я]+$/;
+
     setIsInvalidName(newName === "" ? null : !nameRegex.test(newName));
     validateForm();
   };
@@ -33,15 +35,9 @@ const Form = () => {
 
   const handlePhoneChange = (e) => {
     const newPhone = e.target.value;
-
-    console.log("newPhone:", newPhone);
-
     setPhone(newPhone);
-
     const phoneRegex = /^\d{12}$/;
     setIsValidPhone(newPhone === "" ? null : phoneRegex.test(newPhone));
-    console.log("isValidPhone:", isValidPhone);
-
     validateForm();
   };
 
@@ -58,18 +54,19 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Notify.success(`Hello amigo`);
+    Notify.success(`Hello amigo`);
     setName("");
     setEmail("");
     setPhone("");
     setMessage("");
+    console.log(name, email, phone, message);
   };
 
   return (
     <div className={css.container}>
       <form className={css.form}>
-        <div className={css.inputContainer}>
-          <div>
+        <div className={css.inputBlock}>
+          <div className={css.inputContainer}>
             <label className={css.contact_type}>
               * Full name:
               <input
@@ -79,11 +76,22 @@ const Form = () => {
                 placeholder="John Rosie"
                 required
                 onChange={handleNameChange}
-                className={css.input}
+                className={`${css.input} ${
+                  isInvalidName === true
+                    ? css.invalid
+                    : isInvalidName === false
+                    ? css.valid
+                    : ""
+                }`}
               />
             </label>
+            {isInvalidName && (
+              <div className={css.errorContainer}>
+                <p className={css.errorMsg}>Wrong Fullname</p>
+              </div>
+            )}
           </div>
-          <div>
+          <div className={css.inputContainer}>
             <label className={css.contact_type}>
               * Email:
               <input
@@ -93,11 +101,22 @@ const Form = () => {
                 placeholder="johnrosie@gmail.com"
                 required
                 onChange={handleEmailChange}
-                className={css.input}
+                className={`${css.input} ${
+                  isValidEmail === true
+                    ? css.valid
+                    : isValidEmail === false
+                    ? css.invalid
+                    : ""
+                }`}
               />
             </label>
+            {isIncorrectEmail && (
+              <div className={css.errorContainer}>
+                <p className={css.errorMsg}>Wrong email</p>
+              </div>
+            )}
           </div>
-          <div>
+          <div className={css.inputContainer}>
             <label className={css.contact_type}>
               * Phone:
               <input
@@ -106,10 +125,22 @@ const Form = () => {
                 value={phone}
                 placeholder="380961234567"
                 required
+                title="Enter a valid phone number (12 digits)"
                 onChange={handlePhoneChange}
-                className={css.input}
+                className={`${css.input} ${
+                  isValidPhone === true
+                    ? css.valid
+                    : isValidPhone === false
+                    ? css.invalid
+                    : ""
+                }`}
               />
             </label>
+            {isValidPhone === false && (
+              <div className={css.errorContainer}>
+                <p className={css.errorMsg}>Wrong Phone</p>
+              </div>
+            )}
           </div>
           <div>
             <label className={css.contact_type}>
