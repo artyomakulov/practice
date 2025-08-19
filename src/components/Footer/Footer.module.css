@@ -1,0 +1,72 @@
+.section {
+  padding: 36px 20px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--secondary);
+  padding-top: 24px;
+}
+
+.logo {
+  cursor: pointer;
+}
+.logo:hover path:nth-of-type(3) {
+  fill: var(--secondary);
+}
+
+.btn {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 25px;
+  background-color: var(--secondary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-color: transparent;
+  color: var(--text);
+}
+
+.btn:hover {
+  background-color: var(--text);
+  color: var(--secondary);
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.arrowWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  gap: 8px;
+}
+
+.social {
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.social:hover {
+  color: var(--secondary);
+}
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-direction: column;
+  color: var(--text);
+}

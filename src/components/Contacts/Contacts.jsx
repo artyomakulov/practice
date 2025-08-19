@@ -43,8 +43,20 @@ const Contacts = () => {
           </div>
           <div className={css.contacts_block}>
             <p className={css.contact_type}>Social networks</p>
-            <Facebook className={css.social} />
-            <Instagram className={css.social} />
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Facebook className={css.social} />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Instagram className={css.social} />
+            </a>
           </div>
         </div>
         <div className={css.formWrapper}>

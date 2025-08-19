@@ -35,6 +35,11 @@
 
 .social {
   padding: 12px;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+.social:hover {
+  color: var(--secondary);
 }
 
 @media (min-width: 768px) {
