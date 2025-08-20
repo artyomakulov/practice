@@ -3,6 +3,7 @@ import css from "./Header.module.css";
 import Logo from "../../assets/images/logo.svg?react";
 import BurgerIcon from "../../assets/images/burger.svg?react";
 import ArrowDown from "../../assets/images/arrow-down.svg?react ";
+import { Link } from "react-scroll";
 
 const Header = () => {
   return (
@@ -15,10 +16,12 @@ const Header = () => {
           <span className={css.wrapBurger}>
             <BurgerIcon className={css.burger} />
           </span>
-          <button className={css.btn}>
-            <span className={css.btnText}>Get in touch</span>
-            <ArrowDown className={css.arrow} />
-          </button>
+          <Link to="contacts" smooth={true} duration={1000}>
+            <button className={css.btn}>
+              <span className={css.btnText}>Get in touch</span>
+              <ArrowDown className={css.arrow} />
+            </button>
+          </Link>
         </div>
       </div>
     </header>

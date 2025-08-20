@@ -4,6 +4,7 @@ import Logo from "../../assets/images/logo.svg?react";
 import ArrowTop from "../../assets/images/arrow-top.svg?react";
 import Facebook from "../../assets/images/facebook.svg?react";
 import Instagram from "../../assets/images/instagram.svg?react";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -11,9 +12,11 @@ const Footer = () => {
       <div className={css.logoContainer}>
         <Logo className={css.logo} alt="logo" />
         <button className={css.btn}>
-          <div className={css.arrowWrap}>
-            <ArrowTop className={css.arrow} />
-          </div>
+          <Link to="main" smooth={true} duration={1000}>
+            <div className={css.arrowWrap}>
+              <ArrowTop className={css.arrow} />
+            </div>
+          </Link>
         </button>
       </div>
       <div className={css.socials}>

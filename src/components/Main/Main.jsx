@@ -1,10 +1,11 @@
 import React from "react";
 import css from "./Main.module.css";
 import ArrowRight from "../../assets/images/arrow-right.svg?react";
+import { Link } from "react-scroll";
 
 const Main = () => {
   return (
-    <div className={css.section}>
+    <div className={css.section} id="main">
       <div className={css.textSection}>
         <h1 className={css.title}>RENEWABLE ENERGY For any task</h1>
         <div className={css.description}>
@@ -13,12 +14,14 @@ const Main = () => {
             sources, generating power generation using energy wind, sun, water,
             biomass
           </p>
-          <button className={css.btn}>
-            <span className={css.btnText}>Learn more</span>
-            <span className={css.wrapArrow}>
-              <ArrowRight className={css.arrow} />
-            </span>
-          </button>
+          <Link to="cases" smooth={true} duration={1000}>
+            <button className={css.btn}>
+              <span className={css.btnText}>Learn more</span>
+              <span className={css.wrapArrow}>
+                <ArrowRight className={css.arrow} />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
 
