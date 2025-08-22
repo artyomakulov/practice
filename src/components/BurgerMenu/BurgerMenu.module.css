@@ -1,3 +1,15 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(23, 61, 51, 0.25);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+
 .burgerContainer {
   display: flex;
   flex-direction: column;
@@ -8,8 +20,9 @@
   max-height: 873px;
   background-color: var(--burger);
   backdrop-filter: blur(5px);
-
+  z-index: 150;
   border-radius: 25px;
+  position: relative;
 }
 
 .burgerMenu {
@@ -23,13 +36,17 @@
   border: 0;
   background-color: transparent;
   color: var(--primary);
-  font-family: "Fira Sans", sans-serif;
   font-size: 20px;
   stroke: var(--primary);
   padding: 0 0 8px 0;
   margin: 24px 0;
   cursor: pointer;
   border-bottom: 1px solid var(--primary);
+  transition: color 0.3s, stroke 0.3s;
+}
+.btnClose:hover {
+  color: var(--secondary);
+  stroke: var(--secondary);
 }
 
 .menu {
@@ -75,4 +92,16 @@
 
 .social:hover {
   color: var(--secondary);
+}
+
+@media (min-width: 768px) {
+  .burgerContainer {
+    margin: 36px 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .burgerContainer {
+    margin: 24px 100px;
+  }
 }

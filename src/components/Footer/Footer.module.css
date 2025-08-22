@@ -70,3 +70,15 @@
   flex-direction: column;
   color: var(--text);
 }
+
+@media (min-width: 768px) {
+  .section {
+    padding: 36px 30px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding: 24px 100px;
+  }
+}

@@ -5,8 +5,11 @@ import BurgerIcon from "../../assets/images/burger.svg?react";
 import ArrowDown from "../../assets/images/arrow-down.svg?react ";
 import { Link } from "react-scroll";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header>
       <div className={css.section}>
@@ -14,7 +17,7 @@ const Header = () => {
           <Logo className={css.logo} alt="logo" />
         </span>
         <div className={css.navContainer}>
-          <span className={css.wrapBurger}>
+          <span className={css.wrapBurger} onClick={() => setIsMenuOpen(true)}>
             <BurgerIcon className={css.burger} />
           </span>
           <Link to="contacts" smooth={true} duration={1000}>
@@ -25,7 +28,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <BurgerMenu />
+      {isMenuOpen && <BurgerMenu onClose={() => setIsMenuOpen(false)} />}
     </header>
   );
 };

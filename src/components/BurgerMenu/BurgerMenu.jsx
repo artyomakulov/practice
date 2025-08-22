@@ -6,83 +6,90 @@ import Facebook from "../../assets/images/facebook.svg?react";
 import Instagram from "../../assets/images/instagram.svg?react";
 import { Link } from "react-scroll";
 
-const BurgerMenu = () => {
+const BurgerMenu = ({ onClose }) => {
   return (
-    <div className={css.burgerContainer}>
-      <div className={css.burgerMenu}>
-        <button className={css.btnClose}>
-          <Close />
-          <span>close</span>
-        </button>
-        <div className={css.menu}>
-          <ul className={css.menuList}>
-            <li>
-              <Link
-                to="main"
-                smooth={true}
-                duration={1000}
-                className={css.list_item}
+    <div className={css.overlay}>
+      <div className={css.burgerContainer}>
+        <div className={css.burgerMenu}>
+          <button className={css.btnClose} onClick={onClose}>
+            <Close />
+            <span>close</span>
+          </button>
+          <div className={css.menu}>
+            <ul className={css.menuList}>
+              <li>
+                <Link
+                  to="main"
+                  smooth={true}
+                  duration={1000}
+                  className={css.list_item}
+                  onClick={onClose}
+                >
+                  Main
+                  <BurgerArrow />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={1000}
+                  className={css.list_item}
+                  onClick={onClose}
+                >
+                  About <BurgerArrow />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="cases"
+                  smooth={true}
+                  duration={1000}
+                  className={css.list_item}
+                  onClick={onClose}
+                >
+                  Cases <BurgerArrow />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="faq"
+                  smooth={true}
+                  duration={1000}
+                  className={css.list_item}
+                  onClick={onClose}
+                >
+                  FAQ <BurgerArrow />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="contacts"
+                  smooth={true}
+                  duration={1000}
+                  className={css.list_item}
+                  onClick={onClose}
+                >
+                  Contact Us <BurgerArrow />
+                </Link>
+              </li>
+            </ul>
+            <div className={css.socials}>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
               >
-                Main
-                <BurgerArrow />
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="about"
-                smooth={true}
-                duration={1000}
-                className={css.list_item}
+                <Facebook className={css.social} />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
               >
-                About <BurgerArrow />
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="cases"
-                smooth={true}
-                duration={1000}
-                className={css.list_item}
-              >
-                Cases <BurgerArrow />
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="faq"
-                smooth={true}
-                duration={1000}
-                className={css.list_item}
-              >
-                FAQ <BurgerArrow />
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contacts"
-                smooth={true}
-                duration={1000}
-                className={css.list_item}
-              >
-                Contact Us <BurgerArrow />
-              </Link>
-            </li>
-          </ul>
-          <div className={css.socials}>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Facebook className={css.social} />
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Instagram className={css.social} />
-            </a>
+                <Instagram className={css.social} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
