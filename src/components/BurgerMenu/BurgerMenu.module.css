@@ -1,0 +1,78 @@
+.burgerContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 36px 20px;
+  min-width: 320px;
+  min-height: 700px;
+  max-width: 365px;
+  max-height: 873px;
+  background-color: var(--burger);
+  backdrop-filter: blur(5px);
+
+  border-radius: 25px;
+}
+
+.burgerMenu {
+  margin: 0 24px;
+}
+
+.btnClose {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  color: var(--primary);
+  font-family: "Fira Sans", sans-serif;
+  font-size: 20px;
+  stroke: var(--primary);
+  padding: 0 0 8px 0;
+  margin: 24px 0;
+  cursor: pointer;
+  border-bottom: 1px solid var(--primary);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.list_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.3s, stroke 0.3s;
+}
+
+.list_item:hover {
+  color: var(--secondary);
+  stroke: var(--secondary);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 8px;
+  bottom: 0;
+  position: absolute;
+}
+
+.social {
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.social:hover {
+  color: var(--secondary);
+}

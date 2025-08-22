@@ -4,7 +4,7 @@ import css from "./About.module.css";
 
 const About = () => {
   return (
-    <div className={css.section}>
+    <div className={css.section} id="about">
       <div className={css.image}>
         <img src={mainphoto} alt="wind turbine" className={css.photo} />
       </div>

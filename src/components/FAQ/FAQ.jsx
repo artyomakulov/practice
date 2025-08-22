@@ -14,7 +14,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className={css.section}>
+    <div className={css.section} id="faq">
       <h3 className={css.title}>Frequently Asked Questions</h3>
       <ul className={css.faqSection}>
         {faqData.map((item) => {
