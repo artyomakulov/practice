@@ -2,7 +2,7 @@ import React from "react";
 import css from "./Header.module.css";
 import Logo from "../../assets/images/logo.svg?react";
 import BurgerIcon from "../../assets/images/burger.svg?react";
-import ArrowDown from "../../assets/images/arrow-down.svg?react ";
+import ArrowDown from "../../assets/images/arrow-down.svg?react";
 import { Link } from "react-scroll";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { useState } from "react";

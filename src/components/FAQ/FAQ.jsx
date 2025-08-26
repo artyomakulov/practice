@@ -32,7 +32,7 @@ const FAQ = () => {
               </div>
               <p className={`${css.answer} ${isOpen ? css.open : ""}`}>
                 {item.answer}
-              </p>{" "}
+              </p>
             </li>
           );
         })}
