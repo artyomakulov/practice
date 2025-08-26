@@ -2,6 +2,8 @@
 import React from "react";
 import css from "./Values.module.css";
 import { valuesData } from "./data";
+import ManWorker from "../../assets/images/man-worker.png";
+import WindFarms from "../../assets/images/wind-farms-fields.png";
 
 const Values = () => {
   return (
@@ -21,18 +23,10 @@ const Values = () => {
           {index === 1 && (
             <>
               <div className={css.imageWrapper}>
-                <img
-                  src="/src/assets/images/man-worker.png"
-                  alt="man worker"
-                  className={css.image}
-                />
+                <img src={ManWorker} alt="man worker" className={css.image} />
               </div>
               <div className={css.imageWrapper}>
-                <img
-                  src="/src/assets/images/wind-farms-fields 1.png"
-                  alt="wind fields"
-                  className={css.image}
-                />
+                <img src={WindFarms} alt="wind fields" className={css.image} />
               </div>
             </>
           )}
